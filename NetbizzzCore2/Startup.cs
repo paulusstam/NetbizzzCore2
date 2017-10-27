@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NetbizzzCore2.Repos;
+using Microsoft.EntityFrameworkCore;
 
 namespace NetbizzzCore2
 {
@@ -21,6 +23,9 @@ namespace NetbizzzCore2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<NetbizzzDbContext>
+                (options => options.UseSqlServer(Configuration
+                .GetConnectionString("NetbizzzCore2")));
             services.AddMvc();
         }
 
