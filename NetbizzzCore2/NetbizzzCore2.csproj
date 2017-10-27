@@ -12,4 +12,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Netbizzz.Repos\NetbizzzCore2.Repos.csproj" />
+    <ProjectReference Include="..\NetbizzzCore2.Services\NetbizzzCore2.Services.csproj" />
+  </ItemGroup>
+
 </Project>
